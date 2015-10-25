@@ -99,16 +99,16 @@ extension as shown above or update your code to use the new presenter API.
 Both `color` and `background` accept color specified in any
 of the following ways:
 
-* color number (where 0 is black, 1 is red, 2 is green and so on):
+* ANSI color number (where 0 is black, 1 is red, 2 is green and so on):
   `Rainbow("hello").color(1)`
 
 * [ANSI color](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors) name or [X11 color](https://en.wikipedia.org/wiki/X11_color_names) name as a symbol:
   `Rainbow("hello").color(:yellow)`.
   This can be simplified to `Rainbow("hello").yellow`  
   
-See [Color list](#user-content-color-list) for all available colors.  
-You should remember that ANSI colors can be changed in accordance with terminal setting.  
-But X11 color is just a syntax sugar for RGB triplet. So you always see what you specified.
+  See [Color list](#user-content-color-list) for all available color names.  
+  Note that ANSI colors can be changed in accordance with terminal setting.  
+  But X11 color is just a syntax sugar for RGB triplet. So you always see what you specified.
 
 * RGB triplet as separate values in the range 0-255:
   `Rainbow("hello").color(115, 23, 98)`
