@@ -1,4 +1,5 @@
 require 'rainbow/string_utils'
+require 'rainbow/x11_color_names'
 require 'rainbow/color'
 
 module Rainbow
