@@ -103,6 +103,16 @@ module Rainbow
       color(:white)
     end
 
+    # We take care of X11 color method call here.
+    # Such as #aqua, #ghostwhite.
+    def method_missing(method_name,*args)
+      if Color::X11Named.color_names.include? method_name and args.empty? then
+        color(method_name)
+      else
+        super
+      end
+    end
+
     private
 
     def wrap_with_sgr(codes) #:nodoc:

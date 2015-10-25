@@ -50,6 +50,19 @@ Text color can also be changed by calling a method named by a color:
 * `magenta`
 * `cyan`
 * `white`
+* `aqua`
+* `silver`
+* `aliceblue`
+* `indianred`
+
+
+You can also specify [a X11 color code](https://en.wikipedia.org/wiki/X11_color_names) such as:
+
+* `aqua`
+* `silver`
+* `aliceblue`
+* `indianred`
+
 
 All of the methods return `self` (the presenter object) so you can chain method
 calls:
@@ -89,10 +102,13 @@ of the following ways:
 * color number (where 0 is black, 1 is red, 2 is green and so on):
   `Rainbow("hello").color(1)`
 
-* color name as a symbol (:black, :red, :green, :yellow, :blue,
-  :magenta, :cyan, :white):
+* [ANSI color](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors) name or [X11 color](https://en.wikipedia.org/wiki/X11_color_names) name as a symbol:
   `Rainbow("hello").color(:yellow)`.
-  This can be simplified to `Rainbow("hello").yellow`
+  This can be simplified to `Rainbow("hello").yellow`  
+  
+See [Color list](#user-content-color-list) for all available colors.  
+You should remember that ANSI colors can be changed in accordance with terminal setting.  
+But X11 color is just a syntax sugar for RGB triplet. So you always see what you specified.
 
 * RGB triplet as separate values in the range 0-255:
   `Rainbow("hello").color(115, 23, 98)`
@@ -169,6 +185,8 @@ Or just install it via rubygems:
 ```ruby
 gem install rainbow
 ```
+
+## Color list
 
 ## Authors
 
