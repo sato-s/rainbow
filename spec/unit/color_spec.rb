@@ -295,6 +295,14 @@ module Rainbow
         end
       end
 
+      context "when name is invalid" do
+        let(:name) { :foo }
+        let(:ground) { :background }
+        it 'raises ArgumentError' do
+          expect { subject }.to raise_error(ArgumentError)
+        end
+      end
+
     end
   end
 
