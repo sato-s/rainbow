@@ -4,8 +4,8 @@ rvm:
   - 2.1.0
   - 2.2.0
   - 2.3.0
-  - rbx
-  - jruby
+  - rbx-head
+  - jruby-head
 
 script: "bundle exec rake"
 sudo: false
